@@ -39,11 +39,12 @@ class MediaManager extends Component
     }
     public function render(){
         return view('livewire.media-manager',[
-            'medias'=>::latest()->get()
-        ])
+            'medias'=>Media::latest()->get()
+        ]);
     }
-   
+}
 
+?>
 
 <div class="p-8 max-w-6xl mx-auto">
 
@@ -105,5 +106,4 @@ class MediaManager extends Component
 </div>
 
 
-}
 
