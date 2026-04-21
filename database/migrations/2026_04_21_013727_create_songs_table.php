@@ -11,20 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('media', function (Blueprint $table) {
+        Schema::create('songs', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('file_path');
-            $table->string('type');
+            $table->string('artist');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
-    }   
+    }
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('media');
+        Schema::dropIfExists('songs');
     }
 };
